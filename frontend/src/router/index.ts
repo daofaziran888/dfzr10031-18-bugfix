@@ -10,6 +10,7 @@ const Dashboard = () => import('@/views/dashboard/index.vue')
 const Chart = () => import('@/views/chart/index.vue')
 const DataService = () => import('@/views/data_service/index.vue')
 const Alert = () => import('@/views/alert/index.vue')
+const Availability = () => import('@/views/availability/index.vue')
 const UserGroup = () => import('@/views/user_group/index.vue')
 const Snapshot = () => import('@/views/snapshot/index.vue')
 const Scheduler = () => import('@/views/scheduler/index.vue')
@@ -33,6 +34,7 @@ const router = createRouter({
     { path: '/chart', name: 'chart', component: Chart },
     { path: '/data_service', name: 'data_service', component: DataService },
     { path: '/alert', name: 'alert', component: Alert },
+    { path: '/availability', name: 'availability', component: Availability },
     { path: '/user_group', name: 'user_group', component: UserGroup },
     { path: '/snapshot', name: 'snapshot', component: Snapshot },
     { path: '/scheduler', name: 'scheduler', component: Scheduler },

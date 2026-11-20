@@ -15,6 +15,7 @@ from app.routers import dashboard as router_dashboard
 from app.routers import chart as router_chart
 from app.routers import data_service as router_data_service
 from app.routers import alert as router_alert
+from app.routers import availability as router_availability
 from app.routers import user_group as router_user_group
 from app.routers import snapshot as router_snapshot
 from app.routers import scheduler as router_scheduler
@@ -25,4 +26,4 @@ from app.routers import data_mart as router_data_mart
 from app.routers import export as router_export
 from app.routers import audit as router_audit
 
-ROUTERS = [router_metric_def, router_dimension, router_dataset, router_experiment, router_query_builder, router_dashboard, router_chart, router_data_service, router_alert, router_user_group, router_snapshot, router_scheduler, router_cache, router_pipeline, router_model, router_data_mart, router_export, router_audit]
+ROUTERS = [router_metric_def, router_dimension, router_dataset, router_experiment, router_query_builder, router_dashboard, router_chart, router_data_service, router_alert, router_availability, router_user_group, router_snapshot, router_scheduler, router_cache, router_pipeline, router_model, router_data_mart, router_export, router_audit]

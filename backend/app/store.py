@@ -8,6 +8,15 @@ from typing import Any
 
 from app.seed import SEED_ROWS
 
+# 采集证据表服务于可用观测计算，不作为独立业务模块出现在运营概览里。
+INTERNAL_TABLES = {
+    "source_calendar",
+    "collection_window",
+    "observation_batch",
+    "blackout_receipt",
+    "baseline_profile",
+}
+
 
 class Store:
     def __init__(self) -> None:
@@ -16,7 +25,7 @@ class Store:
         }
 
     def module_names(self) -> list[str]:
-        return sorted(self._tables)
+        return sorted(name for name in self._tables if name not in INTERNAL_TABLES)
 
     def rows(self, module: str) -> list[dict[str, Any]]:
         return self._tables.setdefault(module, [])
